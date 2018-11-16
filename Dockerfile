@@ -12,7 +12,7 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 RUN apt-get -y update
 RUN apt-get -y install yarn
-RUN apt-get -y install nodejs npm
+RUN apt-get -y install nodejs
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
