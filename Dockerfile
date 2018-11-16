@@ -18,7 +18,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #### UI Setup ####
 RUN npx create-react-app my-app
-RUN cd my-app && npm start
+#RUN cd my-app && npm start
 
 #### Files ####
 COPY scripts/run.sh /
