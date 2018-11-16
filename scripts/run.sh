@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function startUI () {
+  echo
 }
 
 function main () {
