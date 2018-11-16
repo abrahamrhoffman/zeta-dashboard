@@ -8,14 +8,16 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+
 RUN apt-get -y update
 RUN apt-get -y install yarn
-RUN apt-get -y install nodejs npm
+RUN apt-get -y install nodejs npm node
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #### NodeJS and Yarn Setup ####
-RUN npm install react-admin
+#RUN npm install react-admin
 #RUN npm install -g create-react-app create-react-app test-admin
 #RUN cd test-admin/ && \
 #    yarn add react-admin ra-data-json-server prop-types && \
