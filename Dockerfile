@@ -16,12 +16,9 @@ RUN apt-get -y install nodejs
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#### NodeJS and Yarn Setup ####
-#RUN npm install react-admin
-#RUN npm install -g create-react-app create-react-app test-admin
-#RUN cd test-admin/ && \
-#    yarn add react-admin ra-data-json-server prop-types && \
-#    yarn start
+#### UI Setup ####
+RUN npx create-react-app my-app
+RUN cd my-app && npm start
 
 #### Files ####
 COPY scripts/run.sh /
