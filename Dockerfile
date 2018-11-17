@@ -18,9 +18,7 @@ RUN apt-get -y install nodejs
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #### UI Setup ####
-#RUN npx create-react-app app
-#RUN create-react-app app
-#RUN rm -rf app/
+# To generate base files run: npx create-react-app app;create-react-app app
 COPY app/ /zeta-ui/
 
 #### Files ####
