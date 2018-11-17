@@ -18,8 +18,9 @@ RUN apt-get -y install nodejs
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #### UI Setup ####
-RUN npx create-react-app app
-RUN rm -rf app/
+#RUN npx create-react-app app
+#RUN create-react-app app
+#RUN rm -rf app/
 COPY app/ /app/
 
 #### Files ####
