@@ -21,7 +21,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #RUN npx create-react-app app
 #RUN create-react-app app
 #RUN rm -rf app/
-COPY app/ /app/
+COPY app/ /zeta-ui/
 
 #### Files ####
 COPY scripts/run.sh /
@@ -29,6 +29,7 @@ RUN chmod +x /run.sh
 
 #### Networking ####
 EXPOSE 3000
+EXPOSE 5000
 
 #### Start ####
 CMD ["/bin/bash", "/run.sh"]
