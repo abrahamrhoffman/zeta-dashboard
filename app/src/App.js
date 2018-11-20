@@ -10,7 +10,7 @@ import UserIcon from '@material-ui/icons/Group';
 const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 const App = () => (
     <Admin dataProvider={dataProvider}>
-        <Resource name="functions" icon={PostIcon} />
+        <Resource name="functions" list={PostList} icon={PostIcon} />
         <Resource name="users" list={UserList} icon={UserIcon} />
     </Admin>
 );
