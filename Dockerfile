@@ -17,6 +17,13 @@ RUN apt-get -y install nodejs
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+#### Framework Setup ####
+RUN npm install -g create-react-app
+RUN cd / && \
+    create-react-app zeta-ui/ && \
+    cd /zeta-ui && \
+    yarn add react-admin ra-data-json-server prop-types
+
 #### UI Setup ####
 # To generate base files run: npx create-react-app app;create-react-app app
 COPY app/ /zeta-ui/
