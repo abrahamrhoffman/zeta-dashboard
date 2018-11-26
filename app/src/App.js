@@ -2,7 +2,7 @@ import React from 'react';
 import { Admin, Resource } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
 import FunctionsIcon from '@material-ui/icons/Code';
-{/*
+/*
 
   Notes ::
 
@@ -15,7 +15,7 @@ import FunctionsIcon from '@material-ui/icons/Code';
   Zeta API Custom Data Provider :: Testing
   Example: const dataProvider = (type, resource, params) => new Promise();
 
-*/}
+*/
 
 const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 const App = () => (
