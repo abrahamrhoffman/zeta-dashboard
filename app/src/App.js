@@ -1,13 +1,12 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+import FunctionsIcon from '@material-ui/icons/Code';
 {/*
   import { Admin, Resource, EditGuesser } from 'react-admin';
   import { PostList } from './posts';
   import { UserList } from './users';
 */}
-import jsonServerProvider from 'ra-data-json-server';
-
-import FunctionsIcon from '@material-ui/icons/Code';
 {/*
   import PostIcon from '@material-ui/icons/Code';
   import UserIcon from '@material-ui/icons/Group';
